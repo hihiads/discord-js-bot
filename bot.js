@@ -54,7 +54,15 @@ process.on("unhandledRejection", (err) => client.logger.error(`Unhandled excepti
     // initialize the database
     await initializeMongoose();
   }
+const app = require('express')();
 
+app.get('/', async (req,res) => {
+  res.send('Hello');
+});
+
+app.listen(3000, async () => {
+ console.log('Listening on port 3000');
+});
   // start the client
   await client.login(process.env.BOT_TOKEN);
 })();
