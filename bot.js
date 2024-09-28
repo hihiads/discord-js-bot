@@ -10,11 +10,24 @@ const { checkForUpdates } = require("@helpers/BotUtils");
 const { initializeMongoose } = require("@src/database/mongoose");
 const { BotClient } = require("@src/structures");
 const { validateConfiguration } = require("@helpers/Validator");
+const { GatewayIntentBits } = require("discord.js"); // Import GatewayIntentBits
 
 validateConfiguration();
 
-// initialize client
-const client = new BotClient();
+// Define intents
+const intents = [
+  GatewayIntentBits.Guilds,
+  GatewayIntentBits.GuildMessages,
+  GatewayIntentBits.MessageContent,
+  GatewayIntentBits.GuildMembers,
+  GatewayIntentBits.GuildMessageTyping,
+  // Add any other intents you need here
+];
+
+// initialize client with intents
+const client = new BotClient({ intents });
+
+// load commands, contexts, and events
 client.loadCommands("src/commands");
 client.loadContexts("src/contexts");
 client.loadEvents("src/events");
