@@ -45,7 +45,7 @@ process.on("unhandledRejection", (err) => client.logger.error(`Unhandled excepti
 const app = require('express')();
 
 app.get('/', async (req,res) => {
-  res.send('Hello');
+  res.send('');
 });
 
 app.listen(3000, async () => {
