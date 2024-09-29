@@ -76,12 +76,12 @@ module.exports = {
   },
 
   IMAGE: {
-    ENABLED: ture,
+    ENABLED: true,
     BASE_API: "https://strangeapi.hostz.me/api",
   },
 
   INVITE: {
-    ENABLED: false,
+    ENABLED: true,
   },
 
   MODERATION: {
