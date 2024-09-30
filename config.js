@@ -37,8 +37,8 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "https://discord-js-bot-89je.onrender.com", // base url
-    failureURL: "https://discord-js-bot-89je.onrender.com", // failure redirect url
+    baseURL: "https://dashboard.snagapiksela.net", // base url
+    failureURL: "https://dashboard.snagapiksela.net", // failure redirect url
     port: "8080", // port to run the bot on
   },
 
